@@ -5,7 +5,7 @@ ARG tag
 ENV WORKDIR="/srv/bililive"
 ENV OUTPUT_DIR="/srv/bililive" \
     CONF_DIR="/etc/bililive-go" \
-    PORT=8080
+    PORT=8090
 
 ENV PUID=0 PGID=0 UMASK=022
 

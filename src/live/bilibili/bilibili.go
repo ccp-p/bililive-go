@@ -103,6 +103,7 @@ func (l *Live) GetInfo() (info *live.Info, err error) {
 		Live:     l,
 		RoomName: gjson.GetBytes(body, "data.title").String(),
 		Status:   gjson.GetBytes(body, "data.live_status").Int() == 1,
+		AudioOnly: true,
 	}
 
 	resp, err = requests.Get(userApiUrl, live.CommonUserAgent, requests.Query("roomid", l.realID))
